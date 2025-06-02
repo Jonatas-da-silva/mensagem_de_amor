@@ -63,11 +63,32 @@ body, html {
   position: absolute;
   width: 20px;
   height: 20px;
-  background: crimson;
-  border-radius: 50%;
-  opacity: 0.7;
+  background: #aa5b67;
+  transform: rotate(-45deg);
   animation: float 10s linear infinite;
+  opacity: 0.8;
 }
+
+.flower::before,
+.flower::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #aa5b67;
+  border-radius: 50%;
+}
+
+.flower::before {
+  top: -10px;
+  left: 0;
+}
+
+.flower::after {
+  top: 0;
+  left: 10px;
+}
+
 
 @keyframes float {
   0% {
@@ -79,3 +100,26 @@ body, html {
     opacity: 0;
   }
 }
+.music-control {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.music-control button {
+  background-color: #ffb6c1;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(255, 182, 193, 0.6);
+  transition: background-color 0.3s ease;
+}
+
+.music-control button:hover {
+  background-color: #9c2642;
+}
+
